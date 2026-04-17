@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExpenseIQ - Smart Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+  <div class="card">
+    <h1>💰 ExpenseIQ</h1>
+    <div class="auth-tabs">
+      <button id="loginTab" onclick="showAuth('login')">Login</button>
+      <button id="signupTab" onclick="showAuth('signup')">Signup</button>
+    </div>
+    <div id="login" class="auth-section">
+      <h2>🔐 Login</h2>
+      <input id="username" placeholder="Username">
+      <input id="password" type="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </div>
+    <div id="signup" class="auth-section hide">
+      <h2>📝 Signup</h2>
+      <input id="newUser" placeholder="Username">
+      <input id="newPass" type="password" placeholder="Password">
+      <button onclick="signup()">Signup</button>
+    </div>
+  </div>
+  <script src="auth.js"></script>
+  <script>
+    function showAuth(section) {
+      document.getElementById('login').classList.add('hide');
+      document.getElementById('signup').classList.add('hide');
+      document.getElementById(section).classList.remove('hide');
+      document.getElementById('loginTab').classList.remove('active');
+      document.getElementById('signupTab').classList.remove('active');
+      document.getElementById(section + 'Tab').classList.add('active');
+    }
+    window.onload = function() { showAuth('login'); };
+  </script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\hp\Desktop\hackethon\index.html

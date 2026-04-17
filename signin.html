@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <link rel="stylesheet" href="signin.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🔐 Sign In</h1>
+
+  <input type="text" id="username" placeholder="Enter Username">
+  <input type="password" id="password" placeholder="Enter Password">
+
+  <button onclick="login()">Login</button>
+
+  <a href="#">Don't have an account? Sign up</a>
+</div>
+
+<script>
+if (localStorage.getItem("loggedIn") === "true") {
+  window.location.href = "human.html";
+}
+</script>
+
+<script>
+function login() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  // Demo credentials
+  if (user === "admin" && pass === "1234") {
+    alert("Login Successful!");
+
+    // Redirect to main app
+    window.location.href = "Human.html"; 
+  } else {
+    alert("Invalid Username or Password");
+  }
+}
+</script>
+
+</body>
+</html>
